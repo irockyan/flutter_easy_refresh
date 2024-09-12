@@ -424,11 +424,12 @@ class _ClassicIndicatorState extends State<_ClassicIndicator>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            alignment: Alignment.center,
-            width: widget.iconDimension,
-            child: _buildIcon(),
-          ),
+          if (_result != IndicatorResult.noMore)
+            Container(
+              alignment: Alignment.center,
+              width: widget.iconDimension,
+              child: _buildIcon(),
+            ),
           if (widget.showText)
             Container(
               margin: EdgeInsets.only(left: widget.spacing),
