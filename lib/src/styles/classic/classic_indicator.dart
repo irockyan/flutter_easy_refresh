@@ -432,7 +432,9 @@ class _ClassicIndicatorState extends State<_ClassicIndicator>
             ),
           if (widget.showText)
             Container(
-              margin: EdgeInsets.only(left: widget.spacing),
+              margin: _result != IndicatorResult.noMore
+                  ? null
+                  : EdgeInsets.only(left: widget.spacing),
               width: widget.textDimension,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
