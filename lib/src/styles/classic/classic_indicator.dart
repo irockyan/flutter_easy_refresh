@@ -296,6 +296,7 @@ class _ClassicIndicatorState extends State<_ClassicIndicator>
           strokeWidth: widget.progressIndicatorStrokeWidth ??
               _kDefaultProgressIndicatorStrokeWidth,
           color: iconTheme.color,
+          backgroundColor: const Color(0xffdfe0e6).withOpacity(0.4),
         ),
       );
     } else if (_mode == IndicatorMode.processed ||
